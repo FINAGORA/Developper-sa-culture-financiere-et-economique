@@ -15,14 +15,15 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
     <header>
         <h1>Développer sa culture financière et économique</h1>
-        <p>Articles, analyses et ressources pour mieux comprendre l'économie et la finance.</p>
+        <p>Articles et analyses pour mieux comprendre l'économie et la finance.</p>
     </header>
+
     <main>
         <!-- Barre de filtres -->
         <div class="filters">
@@ -32,47 +33,39 @@
         </div>
 
         <!-- Articles -->
-        <article data-tags="Finance">
-            <div class="tags">
-                <a href="#" class="tag tag-finance">Finance</a>
-            </div>
-            <h2>Comprendre les marchés boursiers en 2025</h2>
-            <p>Découvrez les tendances actuelles des marchés boursiers et comment investir intelligemment en 2025.</p>
-            <a href="https://exemple.com/marches-boursiers-2025" target="_blank" rel="noopener noreferrer">Lire l'article</a>
-        </article>
+        <section class="articles">
+            <article data-tags="Finance">
+                <div class="tags">
+                    <span class="tag tag-finance">Finance</span>
+                </div>
+                <h2>Comprendre les marchés boursiers en 2025</h2>
+                <p>Découvrez les tendances actuelles des marchés boursiers et comment investir intelligemment en 2025.</p>
+                <a href="https://exemple.com/marches-boursiers-2025" target="_blank" rel="noopener noreferrer">Lire l'article →</a>
+            </article>
 
-        <article data-tags="Économie">
-            <div class="tags">
-                <a href="#" class="tag tag-economie">Économie</a>
-            </div>
-            <h2>L'impact de l'inflation sur le pouvoir d'achat</h2>
-            <p>Analyse des effets de l'inflation et des stratégies pour protéger son budget en période d'incertitude économique.</p>
-            <a href="https://exemple.com/inflation-pouvoir-achat" target="_blank" rel="noopener noreferrer">Lire l'article</a>
-        </article>
+            <article data-tags="Économie">
+                <div class="tags">
+                    <span class="tag tag-economie">Économie</span>
+                </div>
+                <h2>L'impact de l'inflation sur le pouvoir d'achat</h2>
+                <p>Analyse des effets de l'inflation et des stratégies pour protéger son budget en période d'incertitude économique.</p>
+                <a href="https://exemple.com/inflation-pouvoir-achat" target="_blank" rel="noopener noreferrer">Lire l'article →</a>
+            </article>
 
-        <article data-tags="Finance, Économie">
-            <div class="tags">
-                <a href="#" class="tag tag-finance">Finance</a>
-                <a href="#" class="tag tag-economie">Économie</a>
-            </div>
-            <h2>Les cryptomonnaies : opportunité ou risque ?</h2>
-            <p>Exploration des enjeux économiques et financiers des cryptomonnaies en 2025.</p>
-            <a href="https://exemple.com/cryptomonnaies-2025" target="_blank" rel="noopener noreferrer">Lire l'article</a>
-        </article>
+            <article data-tags="Finance, Économie">
+                <div class="tags">
+                    <span class="tag tag-finance">Finance</span>
+                    <span class="tag tag-economie">Économie</span>
+                </div>
+                <h2>Les cryptomonnaies : opportunité ou risque ?</h2>
+                <p>Exploration des enjeux économiques et financiers des cryptomonnaies en 2025.</p>
+                <a href="https://exemple.com/cryptomonnaies-2025" target="_blank" rel="noopener noreferrer">Lire l'article →</a>
+            </article>
+        </section>
     </main>
 
-    <!-- Newsletter -->
-    <section class="newsletter">
-        <h2>Abonnez-vous à la newsletter</h2>
-        <p>Recevez les derniers articles directement dans votre boîte mail.</p>
-        <form action="https://formspree.io/f/XYZ" method="POST" class="newsletter-form">
-            <input type="email" name="email" placeholder="Votre email" required>
-            <button type="submit">S'abonner</button>
-        </form>
-    </section>
-
     <footer>
-        <p>© 2025 Développer sa culture financière et économique. Tous droits réservés.</p>
+        <p>© 2025 Développer sa culture financière et économique.</p>
     </footer>
 
     <!-- Script pour le tri -->
