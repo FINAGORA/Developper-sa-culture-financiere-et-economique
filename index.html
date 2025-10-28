@@ -172,25 +172,29 @@
         <p>Finagora est une plateforme ouverte et gratuite dédiée à la diffusion du savoir économique et financier. Vous y trouverez une sélection de vidéos, articles, podcasts et formations accessibles à tous — du curieux à l’investisseur chevronné — pour comprendre les grands mécanismes de l’économie, suivre l’actualité des marchés et améliorer vos stratégies d’investissement. Notre mission : démocratiser l’accès à la connaissance économique et financière.</p>
     </footer>
     <!-- Script pour le tri -->
-    <script>
-        function filterArticles(tag) {
-            const articles = document.querySelectorAll('article');
-            const buttons = document.querySelectorAll('.filters button');
-            buttons.forEach(button => button.classList.remove('active'));
-            if (tag !== 'all') {
-                event.target.classList.add('active');
-            } else {
-                document.querySelector('.filters button').classList.add('active');
-            }
-            articles.forEach(article => {
-                const articleTags = article.getAttribute('data-tags').split(', ');
-                if (tag === 'all' || articleTags.includes(tag)) {
-                    article.style.display = 'block';
-                } else {
-                    article.style.display = 'none';
-                }
-            });
+<script>
+    function filterArticles(tag) {
+        const articles = document.querySelectorAll('article');
+        const buttons = document.querySelectorAll('.filters button');
+
+        // Réinitialise l'état actif des boutons
+        buttons.forEach(button => button.classList.remove('active'));
+        if (tag !== 'all') {
+            event.target.classList.add('active');
+        } else {
+            document.querySelector('.filters button').classList.add('active');
         }
-    </script>
+
+        // Filtre les articles
+        articles.forEach(article => {
+            const articleTags = article.getAttribute('data-tags').split(', ');
+            if (tag === 'all' || articleTags.includes(tag)) {
+                article.style.display = 'block';
+            } else {
+                article.style.display = 'none';
+            }
+        });
+    }
+</script>
 </body>
 </html>
