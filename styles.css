@@ -186,3 +186,21 @@ footer {
         width: 100%;
     }
 }
+.header-link {
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-top: 0.5rem;
+    padding: 0.3rem 0.6rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    transition: background 0.3s;
+}
+
+.header-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    text-decoration: underline;
+}
