@@ -1,7 +1,7 @@
 :root {
     --primary-color: #4361ee;
     --secondary-color: #3f37c9;
-    --finance-color: #4cc9f0;
+    --investissement-color: #4cc9f0;
     --economie-color: #f72585;
     --coup-de-coeur-color: #ff9800;
     --light-color: #f8f9fa;
@@ -141,9 +141,9 @@ article a:hover {
     font-size: 0.8rem;
     font-weight: 500;
 }
-.tag-finance {
+.tag-investissement {
     background: rgba(76, 201, 240, 0.2);
-    color: var(--finance-color);
+    color: var(--investissement-color);
 }
 .tag-economie {
     background: rgba(247, 37, 133, 0.2);
