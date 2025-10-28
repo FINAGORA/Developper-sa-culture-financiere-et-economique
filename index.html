@@ -28,10 +28,10 @@
     <main>
         <!-- Barre de filtres -->
         <div class="filters">
-            <button onclick="filterArticles('all')" class="active">Tous</button>
-            <button onclick="filterArticles('Finance')">Finance</button>
-            <button onclick="filterArticles('Économie')">Économie</button>
-            <button onclick="filterArticles('Coup de cœur Finagora')">Coup de cœur Finagora</button>
+            <button onclick="filterArticles('all')" class="active" aria-label="Afficher tous les articles">Tous</button>
+            <button onclick="filterArticles('Finance')" aria-label="Filtrer les articles sur la finance">Finance</button>
+            <button onclick="filterArticles('Économie')" aria-label="Filtrer les articles sur l'économie">Économie</button>
+            <button onclick="filterArticles('Coup de cœur Finagora')" aria-label="Filtrer les coups de cœur Finagora">Coup de cœur Finagora</button>
         </div>
         <!-- Articles -->
         <section class="articles">
@@ -55,7 +55,7 @@
                 <div class="tags">
                     <span class="tag tag-finance">Finance</span>
                 </div>
-                <h2>Qu’est ce qu’un ETF ?</h2>
+                <h2>Qu’est-ce qu’un ETF ?</h2>
                 <p>27 octobre 2025</p>
                 <a href="https://www.justetf.com/fr/academy/etf-quest-ce-quun-etf.html" target="_blank" rel="noopener noreferrer">Lire l'article →</a>
             </article>
@@ -172,29 +172,24 @@
         <p>Finagora est une plateforme ouverte et gratuite dédiée à la diffusion du savoir économique et financier. Vous y trouverez une sélection de vidéos, articles, podcasts et formations accessibles à tous — du curieux à l’investisseur chevronné — pour comprendre les grands mécanismes de l’économie, suivre l’actualité des marchés et améliorer vos stratégies d’investissement. Notre mission : démocratiser l’accès à la connaissance économique et financière.</p>
     </footer>
     <!-- Script pour le tri -->
-<script>
-    function filterArticles(tag) {
-        const articles = document.querySelectorAll('article');
-        const buttons = document.querySelectorAll('.filters button');
-
-        // Réinitialise l'état actif des boutons
-        buttons.forEach(button => button.classList.remove('active'));
-        if (tag !== 'all') {
-            event.target.classList.add('active');
-        } else {
-            document.querySelector('.filters button').classList.add('active');
+    <script>
+        function filterArticles(tag) {
+            const articles = document.querySelectorAll('article');
+            const buttons = document.querySelectorAll('.filters button');
+            // Réinitialise l'état actif des boutons
+            buttons.forEach(button => button.classList.remove('active'));
+            // Ajoute la classe active au bouton cliqué
+            event.currentTarget.classList.add('active');
+            // Filtre les articles
+            articles.forEach(article => {
+                const articleTags = article.getAttribute('data-tags').split(',');
+                if (tag === 'all' || articleTags.includes(tag)) {
+                    article.style.display = 'block';
+                } else {
+                    article.style.display = 'none';
+                }
+            });
         }
-
-        // Filtre les articles
-        articles.forEach(article => {
-            const articleTags = article.getAttribute('data-tags').split(', ');
-            if (tag === 'all' || articleTags.includes(tag)) {
-                article.style.display = 'block';
-            } else {
-                article.style.display = 'none';
-            }
-        });
-    }
-</script>
+    </script>
 </body>
 </html>
