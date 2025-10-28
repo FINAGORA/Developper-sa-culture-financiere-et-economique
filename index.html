@@ -3,25 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Déveloper sa culture financière et économique</title>
+    <meta name="description" content="Blog dédié à la culture financière et économique. Articles, analyses et ressources pour mieux comprendre l'économie et la finance.">
+    <meta name="keywords" content="finance, économie, culture financière, actualités économiques, conseils financiers">
+    <meta name="author" content="Adrien">
+    <title>Développer sa culture financière et économique | Blog</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Favicon (optionnel) -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
     <header>
-        <h1>Déveloper sa culture financière et économique</h1>
+        <h1>Développer sa culture financière et économique</h1>
+        <p>Articles, analyses et ressources pour mieux comprendre l'économie et la finance.</p>
     </header>
     <main>
         <!-- Barre de filtres -->
         <div class="filters">
-            <button onclick="filterArticles('all')">Tous</button>
+            <button onclick="filterArticles('all')" class="active">Tous</button>
             <button onclick="filterArticles('Finance')">Finance</button>
             <button onclick="filterArticles('Économie')">Économie</button>
         </div>
 
         <!-- Articles -->
-        <article data-tags="Economie">
+        <article data-tags="Finance">
             <div class="tags">
-                <a href="#" class="tag tag-economie">Economie</a>
+                <a href="#" class="tag tag-finance">Finance</a>
             </div>
             <h2>Taxe sur les ultra-riches, budget, exil fiscal... Gabriel Zucman sur LCI face à François Lenglet et Darius Rochebin.</h2>
             <p>28 octobre 2025</p>
@@ -32,9 +38,9 @@
             <div class="tags">
                 <a href="#" class="tag tag-economie">Économie</a>
             </div>
-            <h2>Titre de l'article 2</h2>
-            <p>Résumé ou lien vers l'article...</p>
-            <a href="https://lien-vers-article.com">Lire l'article</a>
+            <h2>L'impact de l'inflation sur le pouvoir d'achat</h2>
+            <p>Analyse des effets de l'inflation et des stratégies pour protéger son budget.</p>
+            <a href="https://exemple.com/inflation-pouvoir-achat" target="_blank" rel="noopener noreferrer">Lire l'article</a>
         </article>
 
         <article data-tags="Finance, Économie">
@@ -42,13 +48,13 @@
                 <a href="#" class="tag tag-finance">Finance</a>
                 <a href="#" class="tag tag-economie">Économie</a>
             </div>
-            <h2>Titre de l'article 3</h2>
-            <p>Résumé ou lien vers l'article...</p>
-            <a href="https://lien-vers-article.com">Lire l'article</a>
+            <h2>Les cryptomonnaies : opportunité ou risque ?</h2>
+            <p>Exploration des enjeux économiques et financiers des cryptomonnaies en 2025.</p>
+            <a href="https://exemple.com/cryptomonnaies-2025" target="_blank" rel="noopener noreferrer">Lire l'article</a>
         </article>
     </main>
     <footer>
-        <p>© 2025 Mon Blog</p>
+        <p>© 2025 Développer sa culture financière et économique. Tous droits réservés.</p>
     </footer>
 
     <!-- Script pour le tri -->
@@ -63,6 +69,8 @@
             // Activer le bouton cliqué
             if (tag !== 'all') {
                 event.target.classList.add('active');
+            } else {
+                document.querySelector('.filters button').classList.add('active');
             }
 
             // Filtrer les articles
