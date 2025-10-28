@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Blog dédié à la culture financière et économique. Articles, analyses et ressources pour mieux comprendre l'économie et la finance.">
-    <meta name="keywords" content="finance, économie, culture financière, actualités économiques, conseils financiers">
+    <meta name="description" content="Développez votre culture financière et économique avec des articles clairs et accessibles. Actualités, analyses et conseils pour mieux comprendre l'économie et la finance.">
+    <meta name="keywords" content="finance, économie, culture financière, actualités économiques, conseils financiers, investissement, bourse, inflation">
     <meta name="author" content="Adrien">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Développer sa culture financière et économique">
+    <meta property="og:description" content="Blog dédié à la culture financière et économique. Articles, analyses et ressources pour mieux comprendre l'économie et la finance.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ton-nom-d-utilisateur.github.io/mon-blog-articles/">
     <title>Développer sa culture financière et économique | Blog</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Favicon (optionnel) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
@@ -29,9 +36,9 @@
             <div class="tags">
                 <a href="#" class="tag tag-finance">Finance</a>
             </div>
-            <h2>Taxe sur les ultra-riches, budget, exil fiscal... Gabriel Zucman sur LCI face à François Lenglet et Darius Rochebin.</h2>
-            <p>28 octobre 2025</p>
-            <a href="https://www.youtube.com/watch?v=0VAGMgnQMPY">Lire l'article</a>
+            <h2>Comprendre les marchés boursiers en 2025</h2>
+            <p>Découvrez les tendances actuelles des marchés boursiers et comment investir intelligemment en 2025.</p>
+            <a href="https://exemple.com/marches-boursiers-2025" target="_blank" rel="noopener noreferrer">Lire l'article</a>
         </article>
 
         <article data-tags="Économie">
@@ -39,7 +46,7 @@
                 <a href="#" class="tag tag-economie">Économie</a>
             </div>
             <h2>L'impact de l'inflation sur le pouvoir d'achat</h2>
-            <p>Analyse des effets de l'inflation et des stratégies pour protéger son budget.</p>
+            <p>Analyse des effets de l'inflation et des stratégies pour protéger son budget en période d'incertitude économique.</p>
             <a href="https://exemple.com/inflation-pouvoir-achat" target="_blank" rel="noopener noreferrer">Lire l'article</a>
         </article>
 
@@ -53,6 +60,17 @@
             <a href="https://exemple.com/cryptomonnaies-2025" target="_blank" rel="noopener noreferrer">Lire l'article</a>
         </article>
     </main>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <h2>Abonnez-vous à la newsletter</h2>
+        <p>Recevez les derniers articles directement dans votre boîte mail.</p>
+        <form action="https://formspree.io/f/XYZ" method="POST" class="newsletter-form">
+            <input type="email" name="email" placeholder="Votre email" required>
+            <button type="submit">S'abonner</button>
+        </form>
+    </section>
+
     <footer>
         <p>© 2025 Développer sa culture financière et économique. Tous droits réservés.</p>
     </footer>
@@ -63,20 +81,15 @@
             const articles = document.querySelectorAll('article');
             const buttons = document.querySelectorAll('.filters button');
 
-            // Réinitialiser les boutons
             buttons.forEach(button => button.classList.remove('active'));
-
-            // Activer le bouton cliqué
             if (tag !== 'all') {
                 event.target.classList.add('active');
             } else {
                 document.querySelector('.filters button').classList.add('active');
             }
 
-            // Filtrer les articles
             articles.forEach(article => {
                 const articleTags = article.getAttribute('data-tags').split(', ');
-
                 if (tag === 'all' || articleTags.includes(tag)) {
                     article.style.display = 'block';
                 } else {
