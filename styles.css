@@ -1,117 +1,68 @@
 /* Reset et polices */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --finance-color: #27ae60;
+    --economie-color: #e74c3c;
+    --light-color: #f9f9f9;
+    --dark-color: #333;
+    --white-color: #fff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #f9f9f9;
+    color: var(--dark-color);
+    background-color: var(--light-color);
 }
 
 header {
-    background: #2c3e50;
-    color: white;
-    padding: 30px 20px;
+    background: linear-gradient(135deg, var(--secondary-color), #1a252f);
+    color: var(--white-color);
+    padding: 2rem;
     text-align: center;
+    margin-bottom: 2rem;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2em;
+    font-size: 2.2rem;
+    font-weight: 600;
 }
 
 header p {
-    margin: 10px 0 0;
-    font-size: 1.1em;
+    margin: 0.5rem 0 0;
     opacity: 0.9;
+    font-size: 1.1rem;
 }
 
 main {
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 20px;
-    background: white;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
-article {
-    margin-bottom: 25px;
-    padding: 20px;
-    border-left: 5px solid #3498db;
-    background: #fefefe;
-    transition: all 0.3s ease;
-    border-radius: 0 5px 5px 0;
-}
-
-article:hover {
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    transform: translateX(5px);
-}
-
-h2 {
-    color: #2c3e50;
-    margin-top: 0;
-}
-
-p {
-    color: #555;
-}
-
-a {
-    color: #3498db;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 10px;
-}
-
-a:hover {
-    text-decoration: underline;
-    color: #2980b9;
-}
-
-/* Styles pour les balises */
-.tags {
-    margin-bottom: 10px;
-}
-
-.tag {
-    display: inline-block;
-    padding: 5px 10px;
-    margin-right: 5px;
-    border-radius: 3px;
-    font-size: 0.8em;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.tag-finance {
-    background: #27ae60;
-    color: white;
-}
-
-.tag-economie {
-    background: #e74c3c;
-    color: white;
-}
-
-/* Barre de filtres */
+/* Filtres */
 .filters {
-    margin-bottom: 30px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
 }
 
 .filters button {
-    padding: 10px 20px;
-    margin: 0 5px;
+    padding: 0.7rem 1.5rem;
     border: none;
-    border-radius: 3px;
-    background: #3498db;
-    color: white;
+    border-radius: var(--border-radius);
+    background: var(--primary-color);
+    color: var(--white-color);
     cursor: pointer;
-    font-size: 1em;
-    transition: background 0.3s;
+    font-weight: 500;
+    transition: all 0.3s;
 }
 
 .filters button:hover {
@@ -119,13 +70,139 @@ a:hover {
 }
 
 .filters button.active {
-    background: #e74c3c;
+    background: var(--economie-color);
 }
 
-footer {
-    background: #2c3e50;
-    color: white;
+/* Articles */
+article {
+    background: var(--white-color);
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+article h2 {
+    color: var(--secondary-color);
+    margin-top: 0;
+    font-size: 1.4rem;
+}
+
+article p {
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+article a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+}
+
+article a:hover {
+    text-decoration: underline;
+}
+
+/* Balises */
+.tags {
+    margin-bottom: 1rem;
+}
+
+.tag {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    margin-right: 0.5rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.tag-finance {
+    background: var(--finance-color);
+    color: var(--white-color);
+}
+
+.tag-economie {
+    background: var(--economie-color);
+    color: var(--white-color);
+}
+
+/* Newsletter */
+.newsletter {
+    background: var(--secondary-color);
+    color: var(--white-color);
+    padding: 2rem;
     text-align: center;
-    padding: 20px;
-    margin-top: 30px;
+    margin: 2rem auto;
+    max-width: 600px;
+    border-radius: var(--border-radius);
+}
+
+.newsletter h2 {
+    margin-top: 0;
+    font-size: 1.6rem;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.newsletter-form input {
+    padding: 0.8rem;
+    border: none;
+    border-radius: var(--border-radius);
+    width: 60%;
+    font-size: 1rem;
+}
+
+.newsletter-form button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: var(--border-radius);
+    background: var(--primary-color);
+    color: var(--white-color);
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.newsletter-form button:hover {
+    background: #2980b9;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--secondary-color);
+    color: var(--white-color);
+    margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .filters {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .newsletter-form input {
+        width: 100%;
+    }
 }
