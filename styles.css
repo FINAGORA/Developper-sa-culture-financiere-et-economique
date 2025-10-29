@@ -23,6 +23,29 @@ body {
     background-color: var(--light-color);
 }
 
+/* Bouton "Retour en haut" */
+#backToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: var(--white-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    z-index: 999;
+    transition: background 0.3s;
+}
+
+#backToTopBtn:hover {
+    background: var(--secondary-color);
+}
+
 header {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: var(--white-color);
@@ -43,7 +66,38 @@ header p {
     font-size: 1.1rem;
 }
 
-/* Style pour le lien "Outils Financiers" */
+/* Barre de recherche */
+.search-container {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.search-container input {
+    padding: 0.7rem 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    width: 60%;
+    max-width: 400px;
+    font-family: var(--font-family);
+}
+
+.search-container button {
+    padding: 0.7rem 1.5rem;
+    background: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.search-container button:hover {
+    background: var(--secondary-color);
+}
+
+/* Lien "Outils Financiers" */
 .header-link {
     color: var(--white-color);
     text-decoration: none;
@@ -117,6 +171,10 @@ article {
     border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
+article.coup-de-coeur {
+    border-left: 4px solid var(--coup-de-coeur-color);
+}
+
 article:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
@@ -129,10 +187,17 @@ article h2 {
     font-weight: 600;
 }
 
-article p {
+article .summary {
+    color: var(--dark-color);
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+article .date {
     color: var(--gray-color);
-    margin: 1rem 0;
-    line-height: 1.6;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
 }
 
 article a {
@@ -197,6 +262,14 @@ footer {
 @media (max-width: 768px) {
     header h1 {
         font-size: 1.8rem;
+    }
+    .search-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .search-container input {
+        width: 100%;
+        max-width: 100%;
     }
     .filters {
         flex-direction: row;
