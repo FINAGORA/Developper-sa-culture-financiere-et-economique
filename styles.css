@@ -4,6 +4,7 @@
     --investissement-color: #4cc9f0;
     --economie-color: #f72585;
     --coup-de-coeur-color: #ff9800;
+    --fiscalite-color: #7c4dff;
     --light-color: #f8f9fa;
     --dark-color: #212529;
     --gray-color: #6c757d;
@@ -12,6 +13,7 @@
     --border-radius: 12px;
     --font-family: 'Inter', sans-serif;
 }
+
 body {
     font-family: var(--font-family);
     line-height: 1.6;
@@ -20,6 +22,7 @@ body {
     color: var(--dark-color);
     background-color: var(--light-color);
 }
+
 header {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: var(--white-color);
@@ -27,16 +30,19 @@ header {
     text-align: center;
     margin-bottom: 2rem;
 }
+
 header h1 {
     margin: 0;
     font-size: 2.2rem;
     font-weight: 600;
 }
+
 header p {
     margin: 0.5rem 0;
     opacity: 0.9;
     font-size: 1.1rem;
 }
+
 /* Style pour le lien "Outils Financiers" */
 .header-link {
     color: var(--white-color);
@@ -51,15 +57,18 @@ header p {
     border-radius: 20px;
     transition: background 0.3s;
 }
+
 .header-link:hover {
     background: rgba(255, 255, 255, 0.2);
     text-decoration: underline;
 }
+
 main {
     max-width: 900px;
     margin: 0 auto;
     padding: 0 1rem;
 }
+
 /* Filtres */
 .filters {
     display: flex;
@@ -68,6 +77,7 @@ main {
     gap: 1rem;
     flex-wrap: wrap;
 }
+
 .filters button {
     padding: 0.7rem 1.5rem;
     border: none;
@@ -80,20 +90,24 @@ main {
     box-shadow: var(--shadow);
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
+
 .filters button:hover {
     background: var(--primary-color);
     color: var(--white-color);
 }
+
 .filters button.active {
     background: var(--economie-color);
     color: var(--white-color);
     border-color: var(--economie-color);
 }
+
 /* Articles */
 .articles {
     display: grid;
     gap: 1.5rem;
 }
+
 article {
     background: var(--white-color);
     padding: 1.8rem;
@@ -102,21 +116,25 @@ article {
     transition: transform 0.3s, box-shadow 0.3s;
     border: 1px solid rgba(0, 0, 0, 0.05);
 }
+
 article:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
+
 article h2 {
     color: var(--secondary-color);
     margin-top: 0;
     font-size: 1.4rem;
     font-weight: 600;
 }
+
 article p {
     color: var(--gray-color);
     margin: 1rem 0;
     line-height: 1.6;
 }
+
 article a {
     color: var(--primary-color);
     text-decoration: none;
@@ -125,9 +143,11 @@ article a {
     align-items: center;
     gap: 0.3rem;
 }
+
 article a:hover {
     text-decoration: underline;
 }
+
 /* Balises */
 .tags {
     margin-bottom: 1rem;
@@ -135,24 +155,34 @@ article a:hover {
     gap: 0.5rem;
     flex-wrap: wrap;
 }
+
 .tag {
     padding: 0.4rem 0.9rem;
     border-radius: 20px;
     font-size: 0.8rem;
     font-weight: 500;
 }
+
 .tag-investissement {
     background: rgba(76, 201, 240, 0.2);
     color: var(--investissement-color);
 }
+
 .tag-economie {
     background: rgba(247, 37, 133, 0.2);
     color: var(--economie-color);
 }
+
 .tag-coup-de-coeur {
     background: rgba(255, 215, 0, 0.2);
     color: var(--coup-de-coeur-color);
 }
+
+.tag-fiscalite {
+    background: rgba(124, 77, 255, 0.2);
+    color: var(--fiscalite-color);
+}
+
 /* Footer */
 footer {
     text-align: center;
@@ -162,6 +192,7 @@ footer {
     margin-top: 3rem;
     border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
+
 /* Responsive */
 @media (max-width: 768px) {
     header h1 {
@@ -174,6 +205,7 @@ footer {
         padding: 1.5rem;
     }
 }
+
 @media (max-width: 480px) {
     .filters {
         flex-direction: column;
